@@ -14,7 +14,7 @@ namespace threading_learning
             TaskCrate("InformationSecurity", "SSS.exe", QuickTriggerType.Hourly);//создание задачи через функцию
             
             //
-            Thread thr2 = new Thread(new ThreadStart(task.Create));//внесении функции с параметрами в поток классовым методом
+            Thread thr2 = new Thread(new ThreadStart(task.TaskCreate));//внесении функции с параметрами в поток классовым методом
             Thread thr = Thread.CurrentThread;//получение текущего потока
         }
         public static void TaskCrate(string NAME_TASK, string PATH_TO_MY_PROGRAMM, QuickTriggerType triggerType)
